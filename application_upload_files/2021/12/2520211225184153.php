@@ -517,7 +517,7 @@ GMT+8, 2021-12-25 18:32
         });
         jQuery("#Submit").on("click", function() {
             if(jQuery("#ewm").html()!=''){
-                window.location.href = 'plugin.php?id=keke_chongzhi&p=my';
+                //window.location.href = 'plugin.php?id=keke_chongzhi&p=my';
                 return false;
             }
             var zftype=jQuery('#zftype').val();
