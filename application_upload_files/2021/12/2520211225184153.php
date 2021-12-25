@@ -517,7 +517,7 @@ GMT+8, 2021-12-25 18:32
         });
         jQuery("#Submit").on("click", function() {
             if(jQuery("#ewm").html()!=''){
-                //window.location.href = 'plugin.php?id=keke_chongzhi&p=my';
+                // window.location.href = 'plugin.php?id=keke_chongzhi&p=my';
                 return false;
             }
             var zftype=jQuery('#zftype').val();
@@ -550,12 +550,11 @@ GMT+8, 2021-12-25 18:32
                                                 var orderid=data.orderid;
                         setInterval(function(){
                             jQuery.get('https://www.byzhihuo.com/plugin.php?id=keke_chongzhi:checkorder', {orderid:orderid,time:new Date().getTime(),formhash:"288f05cb"},function (datas){
-                                if(datas.state==1){window.location.href = 'plugin.php?id=keke_chongzhi&p=my';return false;}else{return false;}
+                                if(datas.state==1){;return false;}else{return false;}
                             }, "json");
                         },2000);
                         jQuery("#Submit").html('我已支付完成');
                     }else if(data.cardok){
-                        showDialog(data.cardok,'right', '', 'window.location.href = \'plugin.php?id=keke_chongzhi&p=my\'',true,'','','','','',2);
                     }
                 }, "json");
             }
